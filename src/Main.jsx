@@ -13,7 +13,9 @@ function Main() {
             const data = requestAPI.sendID(code)
 
             data.then((res) => {
-                window.location.href = res.url
+                console.log(res)
+                console.log(res.url)
+                //window.location.href = res.url
             }).catch((err) => {
                 alert(err)
             })

@@ -9,14 +9,15 @@ function Main() {
 
     useEffect(() => {
 
-        const data = requestAPI.sendID(code)
+        if (code !== null) {
+            const data = requestAPI.sendID(code)
 
-        data.then((res) => {
-            window.location.href = res
-        }).catch((err) => {
-            alert(err)
-        })
-
+            data.then((res) => {
+                window.location.href = res
+            }).catch((err) => {
+                alert(err)
+            })
+        }
     }, [])
 
     return (
